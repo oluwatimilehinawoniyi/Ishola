@@ -9,10 +9,12 @@
 <style>
 	button {
 		text-transform: capitalize;
-		padding: 0.5rem 0rem;
+		padding: 0.35rem 0rem;
 		border: none;
 		background: none;
 		cursor: pointer;
+		font-weight: 500;
+		outline: none;
 	}
 
 	button:not(:last-of-type) {
@@ -21,6 +23,5 @@
 
 	button.active {
 		border-bottom: 2px solid var(--heading-colour);
-		/* font-weight: 500; */
 	}
 </style>

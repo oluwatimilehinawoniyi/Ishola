@@ -4,7 +4,10 @@
 	import Writing from './Writing.svelte';
 	import Building from './Building.svelte';
 	import Button from './common/Button.svelte';
-	let activeTab = 'experience';
+
+	import { myProjects, myBuilds } from '$lib/data/index';
+
+	let activeTab = 'project';
 
 	function changeTab(tab: string) {
 		activeTab = tab;
@@ -23,11 +26,15 @@
 		{#if activeTab === 'experience'}
 			<Experience />
 		{:else if activeTab === 'project'}
-			<ProjectTab />
+			{#each myProjects as { id, link, title } (id)}
+				<ProjectTab {link} {title} />
+			{/each}
 		{:else if activeTab === 'writings'}
 			<Writing />
 		{:else if activeTab === 'building'}
-			<Building />
+			{#each myProjects as { id, link, title } (id)}
+				<Building />
+			{/each}
 		{/if}
 	</div>
 </section>
@@ -37,8 +44,11 @@
 		margin: 2rem 0rem;
 	}
 	.tab_content {
-		padding: 20px;
-		border: 1px solid #ccc;
-		margin-top: 10px;
+		min-height: 250px;
+		margin-top: 1.5rem;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-auto-rows: max-content;
+		gap: 1rem;
 	}
 </style>

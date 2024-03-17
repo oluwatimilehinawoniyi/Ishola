@@ -30,9 +30,23 @@ h5,
 h6,
 button {
 	color: var(--heading-colour);
+	font-weight: 600;
 }
 p,
-a,
 i {
 	color: var(--paragraph-colour);
+	font-weight: 400;
+	line-height: 1.65;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+svg {
+	stroke: var(--paragraph-colour);
+}
+svg.heading {
+	opacity: 0.85;
 }
