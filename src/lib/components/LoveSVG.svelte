@@ -12,3 +12,37 @@
 		/>
 	</g>
 </svg>
+
+<style>
+	svg {
+		animation: beat 2s ease 0s infinite normal forwards;
+	}
+
+	@keyframes beat {
+		0% {
+			animation-timing-function: ease-out;
+			transform: scale(1);
+			transform-origin: center center;
+		}
+
+		10% {
+			animation-timing-function: ease-in;
+			transform: scale(0.89);
+		}
+
+		17% {
+			animation-timing-function: ease-out;
+			transform: scale(0.96);
+		}
+
+		33% {
+			animation-timing-function: ease-in;
+			transform: scale(0.85);
+		}
+
+		45% {
+			animation-timing-function: ease-out;
+			transform: scale(1);
+		}
+	}
+</style>

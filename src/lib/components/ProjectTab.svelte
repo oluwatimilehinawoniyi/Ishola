@@ -30,10 +30,6 @@
 </div>
 
 <style>
-	/* .project_card {
-		border: 1px solid;
-	} */
-
 	.project_title {
 		display: flex;
 		align-items: center;

@@ -13,7 +13,7 @@
 		activeTab = tab;
 	}
 
-	const data = ['experience', 'project', 'writings', 'building'];
+	const data = ['experience', 'project', 'building'];
 </script>
 
 <section>
@@ -26,15 +26,17 @@
 		{#if activeTab === 'experience'}
 			<Experience />
 		{:else if activeTab === 'project'}
-			{#each myProjects as { id, link, title } (id)}
-				<ProjectTab {link} {title} />
-			{/each}
-		{:else if activeTab === 'writings'}
-			<Writing />
+			<div class="grid_tab">
+				{#each myProjects as { id, link, title } (id)}
+					<ProjectTab {link} {title} />
+				{/each}
+			</div>
 		{:else if activeTab === 'building'}
-			{#each myProjects as { id, link, title } (id)}
-				<Building />
-			{/each}
+			<div class="grid_tab">
+				{#each myBuilds as { id, link, title } (id)}
+					<Building {link} {title} />
+				{/each}
+			</div>
 		{/if}
 	</div>
 </section>
@@ -46,9 +48,12 @@
 	.tab_content {
 		min-height: 250px;
 		margin-top: 1.5rem;
+	}
+
+	.grid_tab {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-auto-rows: max-content;
-		gap: 1rem;
+		gap: 1.5rem 1rem;
 	}
 </style>
