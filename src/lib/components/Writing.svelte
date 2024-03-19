@@ -1,10 +1,7 @@
 <script lang="ts">
-	import { writeUps } from '$lib/data';
+	import { writeUps } from '$lib/data/index';
 </script>
 
-<section>
-	
-</section>
-
+<section></section>
 
 <style></style>

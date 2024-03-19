@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Experience from './Experience.svelte';
 	import ProjectTab from './ProjectTab.svelte';
-	import Writing from './Writing.svelte';
 	import Building from './Building.svelte';
 	import Button from './common/Button.svelte';
 
