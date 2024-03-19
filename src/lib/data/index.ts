@@ -1,3 +1,5 @@
 import { myProjects } from './projects';
 import { myBuilds } from './building';
-export { myProjects, myBuilds };
+import { writeUps } from './write-ups';
+
+export { myProjects, myBuilds , writeUps};
