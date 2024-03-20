@@ -12,7 +12,7 @@
 		activeTab = tab;
 	}
 
-	const data = ['experience', 'project', 'building'];
+	const data = ['experience', 'project', 'building', 'explorations'];
 </script>
 
 <section>
@@ -36,13 +36,20 @@
 					<Building {link} {title} />
 				{/each}
 			</div>
+		{:else if activeTab === 'explorations'}
+			<div></div>
 		{/if}
 	</div>
 </section>
 
 <style>
 	section {
-		margin: 2rem 0rem;
+		margin: 3rem 0rem;
+	}
+	.tab_header {
+		display: flex;
+		align-items: start;
+		gap: 2rem;
 	}
 	.tab_content {
 		min-height: 250px;

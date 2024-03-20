@@ -19,7 +19,7 @@
 <style>
 	section {
 		background: var(--bg-colour);
-		padding-top: var(--top-padding-desktop);
+		
 		margin-bottom: 4rem;
 	}
 </style>

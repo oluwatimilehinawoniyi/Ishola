@@ -2,7 +2,7 @@
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
-	font-size: 16px;
+	font-size: 15px;
 	scrollbar-width: thin;
 	scrollbar-color: rgb(61, 61, 61);
 	scroll-behavior: smooth;
@@ -14,7 +14,7 @@ html {
 
 :root {
 	--top-padding-mobile: 120px;
-	--top-padding-desktop: 160px;
+	--top-padding-desktop: 130px;
 	--font-sacramento: 'Sacramento', cursive;
 	--font-inter: 'Inter', sans-serif;
 	--bg-colour: rgb(255, 255, 255);

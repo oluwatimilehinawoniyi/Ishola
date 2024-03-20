@@ -17,10 +17,6 @@
 		outline: none;
 	}
 
-	button:not(:last-of-type) {
-		margin-right: 1rem;
-	}
-
 	button.active {
 		border-bottom: 2px solid var(--heading-colour);
 	}

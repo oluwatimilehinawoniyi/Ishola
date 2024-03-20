@@ -1,0 +1,46 @@
+<script>
+	import '../../global.css';
+</script>
+
+<main>
+	<div>
+		<a href="/">
+			<i>go back</i>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="16"
+				height="16"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				class="lucide lucide-undo-2"
+				><path d="M9 14 4 9l5-5" /><path
+					d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11"
+				/>
+			</svg>
+		</a>
+	</div>
+	<slot />
+</main>
+
+<style>
+	main {
+		padding-top: var(--top-padding-desktop);
+		/* display: flex; */
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		width: max-content;
+		gap: 0.3rem;
+
+		i {
+			font-weight: 500;
+		}
+	}
+</style>

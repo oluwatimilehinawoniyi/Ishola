@@ -85,7 +85,7 @@
 	}
 	h2 {
 		text-transform: capitalize;
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
 		font-size: 1.45rem;
 	}
 	i {
