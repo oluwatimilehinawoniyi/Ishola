@@ -24,6 +24,7 @@
 		</a>
 	</div>
 	<section>
+		<h3>pen on papers</h3>
 		<div class="container">
 			<Writing />
 		</div>
@@ -38,11 +39,16 @@
 
 	section {
 		grid-column: 2/3;
+
+		h3 {
+			font-size: 1.15rem;
+			text-transform: capitalize;
+			margin-bottom: 2rem;
+		}
 	}
 
 	.container {
 		width: 100%;
-		position: relative;
 		padding-bottom: 2rem;
 	}
 
@@ -52,16 +58,10 @@
 		}
 	} */
 
-	@media screen and (min-width: 1024px) {
-		main {
-			display: grid;
-			grid-template-columns: 1fr 700px 1fr;
-		}
-	}
-
 	.control {
 		width: max-content;
 		justify-self: center;
+		margin-bottom: 1.5rem;
 	}
 
 	a {
@@ -73,6 +73,13 @@
 
 		i {
 			font-weight: 500;
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		main {
+			display: grid;
+			grid-template-columns: 1fr 700px 1fr;
 		}
 	}
 </style>
