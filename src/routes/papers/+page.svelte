@@ -70,9 +70,12 @@
 
 	.control {
 		width: max-content;
-		justify-self: center;
+		/* justify-self: center; */
 		margin-bottom: 1.5rem;
 		grid-column: 1/2;
+		position: fixed;
+		left: 0;
+		padding-left: 5rem;
 	}
 
 	a {

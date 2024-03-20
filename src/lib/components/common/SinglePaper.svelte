@@ -26,5 +26,7 @@
 		text-transform: capitalize;
 		margin-bottom: 0.5rem;
 	}
-	/* .container:hover */
+	.container:hover {
+		background: #ebebeb9a;
+	}
 </style>
