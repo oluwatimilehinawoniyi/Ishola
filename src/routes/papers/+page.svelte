@@ -25,6 +25,7 @@
 	</div>
 	<section>
 		<h3>pen on papers</h3>
+		<p>I use this medium to write about various topics including tech, agriculture, IoT etc.</p>
 		<div class="container">
 			<Writing />
 		</div>
@@ -43,13 +44,13 @@
 		h3 {
 			font-size: 1.15rem;
 			text-transform: capitalize;
-			margin-bottom: 2rem;
+			margin-bottom: 0.85rem;
 		}
 	}
 
 	.container {
 		width: 100%;
-		padding-bottom: 2rem;
+		margin-block: 1.5rem;
 	}
 
 	/* @media screen and (min-width: 768px) {

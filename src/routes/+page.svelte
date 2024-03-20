@@ -1,9 +1,9 @@
 <script>
-	import Connect from '$lib/components/Connect.svelte';
-	import Introduction from '$lib/components/Introduction.svelte';
-	import Now from '$lib/components/Now.svelte';
-	import Projects from '$lib/components/Projects.svelte';
-	import Footer from '$lib/components/Footer.svelte';
+	import Connect from '$lib/components/UI/Connect.svelte';
+	import Introduction from '$lib/components/UI/Introduction.svelte';
+	import Now from '$lib/components/UI/Now.svelte';
+	import Projects from '$lib/components/UI/Projects.svelte';
+	import Footer from '$lib/components/UI/Footer.svelte';
 </script>
 
 <svelte:head>

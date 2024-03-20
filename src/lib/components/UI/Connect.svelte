@@ -1,5 +1,5 @@
 <script>
-	import Article from './Article.svelte';
+	import Article from '../common/Article.svelte';
 </script>
 
 <Article title="connect">

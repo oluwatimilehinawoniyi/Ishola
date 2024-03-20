@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Experience from './Experience.svelte';
-	import ProjectTab from './ProjectTab.svelte';
-	import Explorations from './Explorations.svelte';
-	import Button from './common/Button.svelte';
+	import Experience from '../UI/Experience.svelte';
+	import ProjectTab from '../UI/ProjectTab.svelte';
+	import Explorations from '../UI/Explorations.svelte';
+	import Button from '../common/Button.svelte';
 
 	import { myProjects, myBuilds } from '$lib/data/index';
 

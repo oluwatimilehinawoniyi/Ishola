@@ -1,6 +1,5 @@
 <script>
-	import Article from './Article.svelte';
-	import LoveSVG from '$lib/components/LoveSVG.svelte';
+	import LoveSVG from '$lib/components/UI/LoveSVG.svelte';
 </script>
 
 <div>
