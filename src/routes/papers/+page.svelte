@@ -1,9 +1,9 @@
 <script>
-	import '../../global.css';
+	import Writing from '$lib/components/Writing.svelte';
 </script>
 
 <main>
-	<div>
+	<div class="control">
 		<a href="/">
 			<i>go back</i>
 			<svg
@@ -23,13 +23,45 @@
 			</svg>
 		</a>
 	</div>
-	<slot />
+	<section>
+		<div class="container">
+			<Writing />
+		</div>
+	</section>
 </main>
 
 <style>
 	main {
-		padding-top: var(--top-padding-desktop);
-		/* display: flex; */
+		width: 100%;
+		background: var(--bg-colour);
+	}
+
+	section {
+		grid-column: 2/3;
+	}
+
+	.container {
+		width: 100%;
+		position: relative;
+		padding-bottom: 2rem;
+	}
+
+	/* @media screen and (min-width: 768px) {
+		main {
+			background: #000;
+		}
+	} */
+
+	@media screen and (min-width: 1024px) {
+		main {
+			display: grid;
+			grid-template-columns: 1fr 700px 1fr;
+		}
+	}
+
+	.control {
+		width: max-content;
+		justify-self: center;
 	}
 
 	a {

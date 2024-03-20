@@ -6,23 +6,22 @@
 </script>
 
 <footer>
-	<!-- <div></div> -->
 	<p>oluwatimilehin j. awoniyi</p>
 	<p>{`${formatNumber(day)} / ${formatNumber(month)} / ${year}`}</p>
 </footer>
 
 <style>
 	footer {
+		width: 100%;
 		position: sticky;
+		/* right: 0px; */
+		/* left: 0px; */
 		bottom: 0px;
-		/* background: var(--bg-colour); */
-		/* filter: blur(5px); */
 		backdrop-filter: blur(5px);
 		height: 50px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		/* border-top: 1px solid rgb(190, 190, 190); */
 	}
 	p {
 		font-weight: bold;
