@@ -8,8 +8,8 @@
 		an emotional attachment to these!
 		<br />
 		<br />
-		Yoo! I think I have a thing for <b>agriculture</b> - especially food production. Still unclear
-		in my head but, I'll love to feed my nation and Africa someday!
+		Yoo! I think I have a thing for agriculture - especially food production. Still unclear in my head
+		but, I'll love to feed my nation and Africa someday!
 		<br />
 		<br />
 		I believe <b>the best form of learning is by doing</b>, so, I am ragingly exploring and
