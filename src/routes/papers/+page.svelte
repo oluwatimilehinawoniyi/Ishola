@@ -1,5 +1,5 @@
 <script>
-	import Writing from '$lib/components/Writing.svelte';
+	import Writing from '$lib/components/UI/Writing.svelte';
 </script>
 
 <main>
@@ -22,6 +22,10 @@
 				/>
 			</svg>
 		</a>
+
+		<div class="filter">
+			<h6>Filter</h6>
+		</div>
 	</div>
 	<section>
 		<h3>pen on papers</h3>
@@ -48,9 +52,14 @@
 		}
 	}
 
+	.filter {
+		display: none;
+		margin-top: 5rem;
+	}
+
 	.container {
 		width: 100%;
-		margin-block: 1.5rem;
+		margin-block: 3rem;
 	}
 
 	/* @media screen and (min-width: 768px) {
@@ -63,6 +72,7 @@
 		width: max-content;
 		justify-self: center;
 		margin-bottom: 1.5rem;
+		grid-column: 1/2;
 	}
 
 	a {
@@ -81,6 +91,10 @@
 		main {
 			display: grid;
 			grid-template-columns: 1fr 700px 1fr;
+		}
+
+		.filter {
+			display: block;
 		}
 	}
 </style>
