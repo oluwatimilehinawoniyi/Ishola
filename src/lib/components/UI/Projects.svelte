@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Experience from '../UI/Experience.svelte';
+	import Buildings from '../UI/Buildings.svelte';
 	import ProjectTab from '../UI/ProjectTab.svelte';
 	import Explorations from '../UI/Explorations.svelte';
 	import Button from '../common/Button.svelte';
@@ -12,7 +12,7 @@
 		activeTab = tab;
 	}
 
-	const data = ['experience', 'project', 'explorations'];
+	const data = ['building', 'project', 'explorations'];
 </script>
 
 <section>
@@ -22,8 +22,12 @@
 		{/each}
 	</div>
 	<div class="tab_content">
-		{#if activeTab === 'experience'}
-			<Experience />
+		{#if activeTab === 'building'}
+			<div class="grid_tab">
+				{#each myBuilds as { id, link, title } (id)}
+					<Buildings {link} {title} />
+				{/each}
+			</div>
 		{:else if activeTab === 'project'}
 			<div class="grid_tab">
 				{#each myProjects as { id, link, title } (id)}
@@ -32,9 +36,7 @@
 			</div>
 		{:else if activeTab === 'explorations'}
 			<div class="grid_tab">
-				{#each myBuilds as { id, link, title } (id)}
-					<Explorations {link} {title} />
-				{/each}
+				<Explorations />
 			</div>
 		{/if}
 	</div>

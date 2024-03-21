@@ -1,10 +1,12 @@
 <script lang="ts">
+	export let title: string;
+	export let link: string;
 </script>
 
-<div class="explore_card">
-	<div class="explore_title">
+<div class="build_card">
+	<div class="build_title">
 		<h1>
-			<a href="/explorations">lorem</a>
+			<a href={link} target="_blank">{title}</a>
 		</h1>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -22,11 +24,13 @@
 			/></svg
 		>
 	</div>
-	<p class="explore_description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+	<p class="build_description">
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+	</p>
 </div>
 
 <style>
-	.explore_title {
+	.build_title {
 		display: flex;
 		align-items: center;
 		gap: 0.25rem;
@@ -77,7 +81,7 @@
 		}
 	}
 
-	.explore_description {
+	.build_description {
 		font-size: 0.85rem;
 		line-height: 1.65;
 	}

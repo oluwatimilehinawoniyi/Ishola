@@ -1,11 +1,4 @@
 <script>
-	import Filter from '$lib/components/UI/Filter.svelte';
-	import Writing from '$lib/components/UI/Writing.svelte';
-	// let openFilter = true;
-
-	// function toggleFilter() {
-	// 	openFilter = !openFilter;
-	// }
 </script>
 
 <main>
@@ -28,36 +21,16 @@
 				/>
 			</svg>
 		</a>
-
-		<!-- <button class="filter_toggle" on:click={toggleFilter}>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width={openFilter ? '20' : '22'}
-				height={openFilter ? '20' : '22'}
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				class="lucide lucide-filter"
-			>
-				{#if openFilter}
-					<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
-				{:else}
-					<path d="M18 6 6 18" /><path d="m6 6 12 12" />
-				{/if}
-			</svg>
-		</button> -->
-		<Filter />
 	</div>
 
 	<section>
-		<h3>pen on papers</h3>
-		<p>I use this medium to write about various topics including tech, agriculture, IoT etc.</p>
-		<div class="container">
-			<Writing />
-		</div>
+		<h3>UI explorations</h3>
+		<p>
+			I use this medium to implement UI components I find fascinating and challenging to build;
+			sometimes, they are the figment of my imagination; other times, they are things I have seen
+			and tried implementing on my own...
+		</p>
+		<div class="container"></div>
 	</section>
 </main>
 
@@ -113,13 +86,13 @@
 			grid-template-columns: 1fr 700px 1fr;
 			gap: 1rem;
 		}
-		
+
 		.control {
 			position: sticky;
 			top: var(--top-padding);
 		}
 	}
-	
+
 	@media screen and (min-width: 1240px) {
 		main {
 			display: grid;
