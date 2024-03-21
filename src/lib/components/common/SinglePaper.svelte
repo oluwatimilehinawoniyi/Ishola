@@ -4,7 +4,7 @@
 	export let date: string;
 </script>
 
-<a href="#" class="container">
+<a href="/" class="container">
 	<div class="heading">
 		<h3>{title}</h3>
 		<p>{subtitle}</p>

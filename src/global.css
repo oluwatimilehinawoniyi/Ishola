@@ -20,6 +20,7 @@ html {
 	--bg-colour: rgb(255, 255, 255);
 	--heading-colour: rgb(82, 81, 81);
 	--paragraph-colour: rgb(116, 116, 116);
+	--paragraph-col: 116, 116, 116;
 }
 
 @media screen and (min-width: 320px) {

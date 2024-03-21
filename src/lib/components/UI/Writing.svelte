@@ -15,7 +15,10 @@
 
 <style>
 	section {
+		width: 100%;
+	/*
 		margin: 0 auto;
 		max-width: 700px;
+		*/
 	}
 </style>
