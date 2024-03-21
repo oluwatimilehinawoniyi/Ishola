@@ -6,19 +6,23 @@
 
 	import { myProjects, myBuilds } from '$lib/data/index';
 
-	let activeTab = 'project';
+	let activeTab = 'projects';
 
 	function changeTab(tab: string) {
 		activeTab = tab;
 	}
 
-	const data = ['building', 'project', 'explorations'];
+	const data = ['projects', 'building', 'explorations'];
 </script>
 
 <section>
 	<div class="tab_header">
 		{#each data as item (item)}
-			<Button btn={item} {changeTab} {activeTab} />
+			{#if item !== 'explorations'}
+				<Button btn={item} {changeTab} {activeTab} />
+			{:else}
+				<a href="/explorations" class="explore">{item}</a>
+			{/if}
 		{/each}
 	</div>
 	<div class="tab_content">
@@ -28,7 +32,7 @@
 					<Buildings {link} {title} />
 				{/each}
 			</div>
-		{:else if activeTab === 'project'}
+		{:else if activeTab === 'projects'}
 			<div class="grid_tab">
 				{#each myProjects as { id, link, title } (id)}
 					<ProjectTab {link} {title} />
@@ -43,6 +47,16 @@
 </section>
 
 <style>
+	.explore {
+		text-transform: capitalize;
+		padding: 0.35rem 0rem;
+		border: none;
+		background: none;
+		cursor: pointer;
+		outline: none;
+		color: var(--heading-colour);
+	}
+
 	section {
 		margin: 3rem 0rem;
 	}

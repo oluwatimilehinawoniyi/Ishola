@@ -15,6 +15,7 @@
 		cursor: pointer;
 		font-weight: 500;
 		outline: none;
+		display: block;
 	}
 
 	button.active {
