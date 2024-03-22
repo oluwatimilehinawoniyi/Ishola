@@ -1,6 +1,13 @@
 <script lang="ts">
-	import { writeUps } from '$lib/data/index';
 	import SinglePaper from '../common/SinglePaper.svelte';
+
+	export let posts: {
+		title: string;
+		_id: string;
+		subtitle: string;
+		_createdAt: string;
+		slug: string;
+	}[];
 </script>
 
 <svelte:head>
@@ -8,17 +15,13 @@
 </svelte:head>
 
 <section>
-	{#each writeUps as { title, id, subtitle, date, tag } (id)}
-		<SinglePaper {title} {subtitle} {date} />
+	{#each posts as { title, _id, subtitle, _createdAt, slug } (_id)}
+		<SinglePaper {title} {subtitle} {_createdAt} {slug} />
 	{/each}
 </section>
 
 <style>
 	section {
 		width: 100%;
-	/*
-		margin: 0 auto;
-		max-width: 700px;
-		*/
 	}
 </style>
