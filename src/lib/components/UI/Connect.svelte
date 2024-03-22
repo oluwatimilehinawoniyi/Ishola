@@ -4,7 +4,7 @@
 
 <Article title="connect">
 	<p>
-		You can reach me <a href="https://github.com/Jon-tim" target="_blank"> @Jon-tim </a>
+		You can reach me <a href="https://github.com/oluwatimilehinawoniyi" target="_blank"> @Jon-tim </a>
 		on Github
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
