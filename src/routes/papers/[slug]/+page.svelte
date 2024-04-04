@@ -1,4 +1,32 @@
 <script lang="ts">
+	import CustomHeading from '$lib/components/CustomSanities/CustomHeading.svelte';
+	import CustomLink from '$lib/components/CustomSanities/CustomLink.svelte';
+	import CustomParagraph from '$lib/components/CustomSanities/CustomParagraph.svelte';
+	import CustomQuote from '$lib/components/CustomSanities/CustomQuote.svelte';
+	import { formatDate } from '$lib/utils/utils.js';
+	import { PortableText } from '@portabletext/svelte';
+	export let data;
+
+	const { title, subtitle, _createdAt, _updatedAt, image, body } = data.props?.post[0];
+
+	const components = {
+		types: {
+			link: CustomLink
+		},
+		marks: {
+			link: CustomLink
+		},
+		block: {
+			normal: CustomParagraph,
+			blockquote: CustomQuote,
+			h1: CustomHeading,
+			h2: CustomHeading,
+			h3: CustomHeading,
+			h4: CustomHeading,
+			h5: CustomHeading,
+			h6: CustomHeading
+		}
+	};
 </script>
 
 <main>
@@ -24,30 +52,26 @@
 	</div>
 
 	<section>
-		<h3>Lorem ipsum dolor sit amet.</h3>
+		<h3>{title}</h3>
 
-		<h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut quod dignissimos aliquid!</h5>
+		<h5>{subtitle}</h5>
+		<div class="date">
+			<p>{`created: ${formatDate(_createdAt)}`}</p>
+			<p>{`updated: ${formatDate(_updatedAt)}`}</p>
+		</div>
 
-		<p>
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique maiores velit repellendus
-			sed modi labore? Fugit nulla blanditiis cumque provident iste eos! Delectus vero asperiores
-			modi quis provident consectetur veritatis dolores nostrum, non doloremque alias, dignissimos
-			earum beatae quae officia expedita ad itaque iure maxime accusantium tenetur fugiat harum?
-			Consequatur quas dolorum earum odit, modi maiores ducimus iusto inventore recusandae libero
-			sunt dolorem aliquam totam neque suscipit et provident odio asperiores? Dolores cum, alias
-			quidem accusantium, commodi corporis illo, veritatis distinctio recusandae dicta molestiae.
-			Suscipit, blanditiis optio omnis aperiam, quos voluptates ratione dolore iste ullam reiciendis
-			deserunt, dolores corporis nesciunt.
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique maiores velit repellendus
-			sed modi labore? Fugit nulla blanditiis cumque provident iste eos! Delectus vero asperiores
-			modi quis provident consectetur veritatis dolores nostrum, non doloremque alias, dignissimos
-			earum beatae quae officia expedita ad itaque iure maxime accusantium tenetur fugiat harum?
-			Consequatur quas dolorum earum odit, modi maiores ducimus iusto inventore recusandae libero
-			sunt dolorem aliquam totam neque suscipit et provident odio asperiores? Dolores cum, alias
-			quidem accusantium, commodi corporis illo, veritatis distinctio recusandae dicta molestiae.
-			Suscipit, blanditiis optio omnis aperiam, quos voluptates ratione dolore iste ullam reiciendis
-			deserunt, dolores corporis nesciunt.
-		</p>
+		<div class="image_holder">
+			<img src={image} alt="" />
+		</div>
+
+		<div class="post_content">
+			<PortableText
+				value={body}
+				components={{
+					...components
+				}}
+			/>
+		</div>
 	</section>
 </main>
 
@@ -57,6 +81,24 @@
 		background: var(--bg-colour);
 		position: relative;
 		align-items: flex-start;
+		padding-bottom: 2rem;
+	}
+
+	.date {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		p {
+			font-size: 0.8rem;
+		}
+	}
+
+	.image_holder {
+		margin-block: 2rem;
+		img {
+			width: 100%;
+		}
 	}
 
 	section {
@@ -107,6 +149,16 @@
 		.control {
 			position: sticky;
 			top: var(--top-padding);
+		}
+
+		.image_holder {
+			height: 300px;
+
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
 		}
 	}
 

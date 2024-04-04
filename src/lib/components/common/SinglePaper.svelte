@@ -1,16 +1,10 @@
 <script lang="ts">
+	import { formatDate } from "$lib/utils/utils";
+
 	export let title: string;
 	export let subtitle: string;
 	export let _createdAt: string;
 	export let slug: string;
-
-	function formatDate(dateString: string) {
-		const date = new Date(dateString);
-		const day = date.getDate().toString().padStart(2, '0');
-		const month = (date.getMonth() + 1).toString().padStart(2, '0');
-		const year = date.getFullYear();
-		return `${day}/${month}/${year}`;
-	}
 </script>
 
 <a href={`papers/${slug}`} class="container">

@@ -47,7 +47,8 @@ h3,
 h4,
 h5,
 h6,
-button {
+button,
+blockquote {
 	color: var(--heading-colour);
 	font-weight: 600;
 }

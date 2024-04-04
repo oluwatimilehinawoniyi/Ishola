@@ -3,7 +3,7 @@
 	import Writing from '$lib/components/UI/Writing.svelte';
 	export let data;
 
-	console.log(data.props?.post);
+	// console.log(data.props?.post);
 	const posts = data.props?.post;
 </script>
 
