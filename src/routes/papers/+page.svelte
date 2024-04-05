@@ -1,12 +1,11 @@
 <script>
+	import { onMount } from 'svelte';
 	import Filter from '$lib/components/UI/Filter.svelte';
 	import Writing from '$lib/components/UI/Writing.svelte';
 	import { filteredPosts } from '$lib/store/FilterPaperStore';
 
 	export let data;
 
-	// const posts = data.props?.posts;
-	// console.log(data.props?.categories);
 	$: tags = [...data.props?.categories];
 </script>
 

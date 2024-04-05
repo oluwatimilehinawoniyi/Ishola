@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { activeFilter } from '$lib/store/FilterPaperStore';
+	import { onMount } from 'svelte';
 
 	export let tags: { title: string; _id: string }[];
 	const data = ['all', ...tags.map((tag) => tag.title)];
@@ -14,6 +15,11 @@
 
 		activeFilter.set(activeItem);
 	}
+
+	$: currentFilter = $activeFilter;
+	onMount(() => {
+		toggleActive(currentFilter);
+	});
 </script>
 
 <section class="filter">
