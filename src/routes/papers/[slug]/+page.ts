@@ -15,7 +15,9 @@ export const load: PageLoad = async ({ url }) => {
 	try {
 		const data = await client.fetch(`*[_type == "post" && slug.current == "${curSlug}"]{
 			_id,
-			categories,
+			"categories": categories[]->{
+    title
+  },
 			title,
 			subtitle,
 			_createdAt,

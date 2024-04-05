@@ -1,24 +1,29 @@
-import { createClient } from '@sanity/client';
+import { client } from '$lib/sanityClient';
+import { papersStore } from '$lib/store/FilterPaperStore';
 
-const client = createClient({
-	projectId: 'ggo1whv8',
-	dataset: 'idk',
-	apiVersion: '2022-03-07',
-	useCdn: false
-});
 export async function load() {
 	try {
-		const data = await client.fetch(`*[_type == "post"]{
+		const postsData = await client.fetch(`*[_type == "post"]{
 			_id,
-			categories,
+			 "categories": categories[]->{
+    title
+  },
 			title,
 			subtitle,
 			_createdAt,
 			"slug": slug.current,
 		}`);
+
+		const categoriesData = await client.fetch(`*[_type == "category"]{
+      title, _id
+    }`);
+
+		papersStore.set(postsData);
+
 		return {
 			props: {
-				post: data
+				posts: postsData,
+				categories: categoriesData
 			}
 		};
 	} catch (error) {
@@ -29,3 +34,9 @@ export async function load() {
 		};
 	}
 }
+
+// data to be fetched secondly
+
+// *[_type == "category"]{
+//   title, _id
+// }

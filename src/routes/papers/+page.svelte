@@ -1,10 +1,13 @@
 <script>
 	import Filter from '$lib/components/UI/Filter.svelte';
 	import Writing from '$lib/components/UI/Writing.svelte';
+	import { filteredPosts } from '$lib/store/FilterPaperStore';
+
 	export let data;
 
-	// console.log(data.props?.post);
-	const posts = data.props?.post;
+	// const posts = data.props?.posts;
+	// console.log(data.props?.categories);
+	$: tags = [...data.props?.categories];
 </script>
 
 <main>
@@ -27,14 +30,14 @@
 				/>
 			</svg>
 		</a>
-		<Filter />
+		<Filter {tags} />
 	</div>
 
 	<section>
 		<h3>pen on papers</h3>
 		<p>I use this medium to write about various topics including tech, agriculture, IoT etc.</p>
 		<div class="container">
-			<Writing {posts} />
+			<Writing posts={$filteredPosts} />
 		</div>
 	</section>
 </main>

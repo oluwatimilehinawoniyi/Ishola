@@ -1,14 +1,18 @@
 <script lang="ts">
-	const data = ['all', 'IoT', 'agriculture', 'svelte'];
+	import { activeFilter } from '$lib/store/FilterPaperStore';
+
+	export let tags: { title: string; _id: string }[];
+	const data = ['all', ...tags.map((tag) => tag.title)];
 	let activeItem: string | null = 'all';
 
 	function toggleActive(item: string) {
 		if (activeItem === item && activeItem !== 'all') {
-			// activeItem = null;
 			activeItem = 'all';
 		} else {
 			activeItem = item;
 		}
+
+		activeFilter.set(activeItem);
 	}
 </script>
 
@@ -19,7 +23,10 @@
 
 	<div class="keys_holder">
 		{#each data as item (item)}
-			<button class="keys {activeItem === item ? 'active' : ''}" on:click={() => toggleActive(item)}>
+			<button
+				class="keys {activeItem === item ? 'active' : ''}"
+				on:click={() => toggleActive(item)}
+			>
 				<p>{item}</p>
 			</button>
 		{/each}
