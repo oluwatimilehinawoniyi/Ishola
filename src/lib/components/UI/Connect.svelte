@@ -4,7 +4,9 @@
 
 <Article title="connect">
 	<p>
-		You can reach me <a href="https://github.com/oluwatimilehinawoniyi" target="_blank"> @Jon-tim </a>
+		You can reach me <a href="https://github.com/oluwatimilehinawoniyi" target="_blank">
+			@oluwatimilehinawoniyi
+		</a>
 		on Github
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -43,14 +45,12 @@
 </Article>
 
 <style>
-	p {
-		a {
-			text-decoration: underline;
-			font-weight: 600;
-		}
+	p a {
+		text-decoration: underline;
+		font-weight: 600;
+	}
 
-		svg {
-			transform: translateY(3px);
-		}
+	p svg {
+		transform: translateY(3px);
 	}
 </style>

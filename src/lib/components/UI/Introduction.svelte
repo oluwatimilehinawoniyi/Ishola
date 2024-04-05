@@ -40,42 +40,41 @@
 		font-weight: 500;
 		position: relative;
 		overflow: hidden;
+	}
+	.blog svg {
+		transform: translateY(3px);
+	}
 
-		svg {
-			transform: translateY(3px);
-		}
+	.blog::before,
+	.blog::after {
+		content: '';
+		position: absolute;
+		bottom: 0px;
+		left: 0%;
+		height: 1px;
+		background: var(--paragraph-colour);
+		transition: all 0.5s ease;
+	}
 
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: 0px;
-			left: 0%;
-			height: 1px;
-			background: var(--paragraph-colour);
-			transition: all 0.5s ease;
-		}
+	.blog::before {
+		left: 0;
+		width: 100%; /* Full width initially */
+	}
 
-		&::before {
-			left: 0;
-			width: 100%; /* Full width initially */
-		}
+	.blog::after {
+		right: 0;
+		width: 0%; /* Hidden initially */
+		transition-delay: 0.1s;
+	}
 
-		&::after {
-			right: 0;
-			width: 0%; /* Hidden initially */
-			transition-delay: 0.1s;
-		}
+	.blog:hover::before {
+		width: 0%; /* Shrinks away */
+		left: 100%; /* Moves to the right, effectively disappearing */
+	}
 
-		&:hover::before {
-			width: 0%; /* Shrinks away */
-			left: 100%; /* Moves to the right, effectively disappearing */
-		}
-
-		&:hover::after {
-			width: 100%; /* Grows to full width */
-			right: 0; /* Starts growing from the left */
-		}
+	.blog:hover::after {
+		width: 100%; /* Grows to full width */
+		right: 0; /* Starts growing from the left */
 	}
 	span {
 		display: block;

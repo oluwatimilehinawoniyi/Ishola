@@ -41,7 +41,7 @@
 	</section>
 </main>
 
-<style>
+<style lang="postcss">
 	main {
 		width: 100%;
 		background: var(--bg-colour);
@@ -52,12 +52,11 @@
 	section {
 		width: 100%;
 		grid-column: 2/3;
-
-		h3 {
-			font-size: 1.35rem;
-			text-transform: capitalize;
-			margin-bottom: 0.85rem;
-		}
+	}
+	h3 {
+		font-size: 1.35rem;
+		text-transform: capitalize;
+		margin-bottom: 0.85rem;
 	}
 
 	.container {
@@ -68,18 +67,16 @@
 	.control {
 		margin-bottom: 1.5rem;
 		grid-column: 1/2;
-
-		a {
-			display: flex;
-			align-items: center;
-			flex-direction: row-reverse;
-			width: max-content;
-			gap: 0.3rem;
-
-			i {
-				font-weight: 500;
-			}
-		}
+	}
+	a {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		width: max-content;
+		gap: 0.3rem;
+	}
+	i {
+		font-weight: 500;
 	}
 
 	@media screen and (min-width: 1024px) {

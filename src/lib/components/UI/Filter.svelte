@@ -62,14 +62,14 @@
 		display: flex;
 		align-items: start;
 		gap: 0.5rem;
-
-		svg {
-			transform: translateY(2px);
-		}
-		p {
-			font-size: 0.85rem;
-		}
 	}
+	.info svg {
+		transform: translateY(2px);
+	}
+	.info p {
+		font-size: 0.85rem;
+	}
+	
 	.filter {
 		display: none;
 		margin-top: 5rem;
@@ -93,21 +93,21 @@
 		place-items: center;
 		padding: 0.3rem 0.5rem;
 		background-color: rgba(var(--paragraph-col), 0.2);
+	}
 
-		p {
-			text-transform: capitalize;
-			font-weight: 500;
-			opacity: 0.5;
-			line-height: normal;
-		}
+	.keys p {
+		text-transform: capitalize;
+		font-weight: 500;
+		opacity: 0.5;
+		line-height: normal;
 	}
 
 	.active {
 		background: var(--paragraph-colour);
-		p {
-			color: #fff;
-			opacity: 1;
-		}
+	}
+	.active p {
+		color: #fff;
+		opacity: 1;
 	}
 
 	@media screen and (min-width: 1024px) {

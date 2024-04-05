@@ -24,9 +24,7 @@
 			/></svg
 		>
 	</div>
-	<p class="project_description">
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-	</p>
+	<p class="project_description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
 </div>
 
 <style>
@@ -34,51 +32,51 @@
 		display: flex;
 		align-items: center;
 		gap: 0.25rem;
+	}
 
-		h1 {
-			margin-bottom: 0.35rem;
-			cursor: pointer;
-			text-transform: capitalize;
-			font-weight: 500;
-			position: relative;
-			overflow: hidden;
-		}
+	.project_title h1 {
+		margin-bottom: 0.35rem;
+		cursor: pointer;
+		text-transform: capitalize;
+		font-weight: 500;
+		position: relative;
+		overflow: hidden;
+	}
 
-		h1::before,
-		h1::after {
-			content: '';
-			position: absolute;
-			bottom: 0px;
-			left: 0%;
-			height: 1px;
-			background: var(--paragraph-colour);
-			transition: all 0.5s ease;
-		}
+	.project_title h1::before,
+	.project_title h1::after {
+		content: '';
+		position: absolute;
+		bottom: 0px;
+		left: 0%;
+		height: 1px;
+		background: var(--paragraph-colour);
+		transition: all 0.5s ease;
+	}
 
-		h1::before {
-			left: 0;
-			width: 100%; /* Full width initially */
-		}
+	.project_title h1::before {
+		left: 0;
+		width: 100%; /* Full width initially */
+	}
 
-		h1::after {
-			right: 0;
-			width: 0%; /* Hidden initially */
-			transition-delay: 0.1s;
-		}
+	.project_title h1::after {
+		right: 0;
+		width: 0%; /* Hidden initially */
+		transition-delay: 0.1s;
+	}
 
-		h1:hover::before {
-			width: 0%; /* Shrinks away */
-			left: 100%; /* Moves to the right, effectively disappearing */
-		}
+	.project_title h1:hover::before {
+		width: 0%; /* Shrinks away */
+		left: 100%; /* Moves to the right, effectively disappearing */
+	}
 
-		h1:hover::after {
-			width: 100%; /* Grows to full width */
-			right: 0; /* Starts growing from the left */
-		}
+	.project_title h1:hover::after {
+		width: 100%; /* Grows to full width */
+		right: 0; /* Starts growing from the left */
+	}
 
-		svg {
-			transform: translateY(-3px);
-		}
+	.project_title svg {
+		transform: translateY(-3px);
 	}
 
 	.project_description {
