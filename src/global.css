@@ -30,7 +30,7 @@ html {
 }
 @media screen and (min-width: 425px) {
 	:root {
-		--top-padding: 150px;
+		--top-padding: 130px;
 	}
 }
 
