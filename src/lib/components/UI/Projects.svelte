@@ -1,10 +1,9 @@
 <script lang="ts">
-	import Buildings from '../UI/Buildings.svelte';
 	import ProjectTab from '../UI/ProjectTab.svelte';
 	import Explorations from '../UI/Explorations.svelte';
 	import Button from '../common/Button.svelte';
 
-	import { myProjects, myBuilds } from '$lib/data/index';
+	import { myProjects } from '$lib/data/index';
 
 	let activeTab = 'projects';
 
@@ -12,7 +11,7 @@
 		activeTab = tab;
 	}
 
-	const data = ['projects', 'building', 'explorations'];
+	const data = ['projects', 'explorations'];
 </script>
 
 <section>
@@ -26,16 +25,10 @@
 		{/each}
 	</div>
 	<div class="tab_content">
-		{#if activeTab === 'building'}
-			<div class="grid_tab">
-				{#each myBuilds as { id, link, title } (id)}
-					<Buildings {link} {title} />
-				{/each}
-			</div>
-k		{:else if activeTab === 'projects'}
+		{#if activeTab === 'projects'}
 			<div class="grid_tab">
 				{#each myProjects as { id, link, title, description } (id)}
-					<ProjectTab {link} {title} {description}/>
+					<ProjectTab {link} {title} {description} />
 				{/each}
 			</div>
 		{:else if activeTab === 'explorations'}
