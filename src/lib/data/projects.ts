@@ -3,7 +3,7 @@ export const myProjects = [
 		id: 1,
 		title: 'paladin',
 		link: 'https://paladin-tau.vercel.app/',
-		description: 'An all-in-one shop to fulfill your audio needs.'
+		description: "A job application manager from the applicant's POV."
 	},
 	{
 		id: 2,
