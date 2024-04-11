@@ -1,6 +1,7 @@
 <script lang="ts">
 	export let title: string;
 	export let link: string;
+	export let description: string;
 </script>
 
 <div class="project_card">
@@ -24,7 +25,7 @@
 			/></svg
 		>
 	</div>
-	<p class="project_description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+	<p class="project_description">{description}</p>
 </div>
 
 <style>
@@ -80,7 +81,7 @@
 	}
 
 	.project_description {
-		font-size: 0.85rem;
+		/* font-size: 0.9rem; */
 		line-height: 1.65;
 	}
 </style>

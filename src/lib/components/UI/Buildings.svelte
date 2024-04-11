@@ -79,7 +79,7 @@
 	}
 
 	.build_description {
-		font-size: 0.85rem;
+		/* font-size: 0.85rem; */
 		line-height: 1.65;
 	}
 </style>

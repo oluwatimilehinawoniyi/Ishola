@@ -32,10 +32,10 @@
 					<Buildings {link} {title} />
 				{/each}
 			</div>
-		{:else if activeTab === 'projects'}
+k		{:else if activeTab === 'projects'}
 			<div class="grid_tab">
-				{#each myProjects as { id, link, title } (id)}
-					<ProjectTab {link} {title} />
+				{#each myProjects as { id, link, title, description } (id)}
+					<ProjectTab {link} {title} {description}/>
 				{/each}
 			</div>
 		{:else if activeTab === 'explorations'}
@@ -66,7 +66,7 @@
 		gap: 2rem;
 	}
 	.tab_content {
-		min-height: 180px;
+		min-height: 100px;
 		margin-top: 1.5rem;
 	}
 
