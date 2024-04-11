@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { formatDate } from "$lib/utils/utils";
+	import { formatDate } from '$lib/utils/utils';
 
 	export let title: string;
 	export let subtitle: string;
@@ -31,5 +31,11 @@
 	}
 	.container:hover {
 		background: #ebebeb9a;
+	}
+	
+	@media (prefers-color-scheme: dark) {
+		.container:hover {
+			background: #4d4c4c9a;
+		}
 	}
 </style>

@@ -13,8 +13,6 @@ html {
 }
 
 :root {
-	/* --top-padding-mobile: 120px; */
-	/* --top-padding-desktop: 130px; */
 	--font-sacramento: 'Sacramento', cursive;
 	--font-inter: 'Inter', sans-serif;
 	--bg-colour: rgb(255, 255, 255);
@@ -31,6 +29,15 @@ html {
 @media screen and (min-width: 425px) {
 	:root {
 		--top-padding: 130px;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-colour: rgb(18, 18, 18);
+		--heading-colour: rgb(255, 255, 255);
+		--paragraph-colour: rgb(185, 185, 185);
+		--paragraph-col: 185, 185, 185;
 	}
 }
 
@@ -70,3 +77,12 @@ svg {
 svg.heading {
 	opacity: 0.85;
 }
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--bg-colour: rgb(255, 255, 255);
+		--heading-colour: rgb(82, 81, 81);
+		--paragraph-colour: rgb(116, 116, 116);
+		--paragraph-col: 116, 116, 116;
+	}
+} */

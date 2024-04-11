@@ -11,6 +11,7 @@
 		width: 100%;
 		padding: 0rem 1.25rem;
 		padding-top: var(--top-padding);
+		background-color: var(--bg-colour);
 	}
 
 	/* @media (min-width: ){} */
