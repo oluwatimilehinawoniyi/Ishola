@@ -19,8 +19,9 @@ export const myProjects = [
 	},
 	{
 		id: 4,
-		title: 'sneakers product page',
-		link: 'https://sneakers-fawn.vercel.app/',
-		description: 'A product page of a pair of sneakers.'
+		title: 'hermes logistics',
+		link: 'https://hermeslogistics.vercel.app/',
+		description:
+			'An efficient platform developed to streamline logistics management.'
 	}
 ];
