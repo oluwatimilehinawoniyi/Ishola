@@ -4,11 +4,9 @@
 	export let description: string;
 </script>
 
-<div class="project_card">
+<a href={link} target="_blank" class="project_card">
 	<div class="project_title">
-		<h1>
-			<a href={link} target="_blank">{title}</a>
-		</h1>
+		<h1>{title}</h1>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="16"
@@ -26,13 +24,21 @@
 		>
 	</div>
 	<p class="project_description">{description}</p>
-</div>
+</a>
 
 <style>
+	.project_card {
+		padding: 1.25rem;
+		border-radius: 1rem;
+		background-color: var(--card-bg);
+	}
+
 	.project_title {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		gap: 0.25rem;
+		margin-bottom: 0.5rem;
 	}
 
 	.project_title h1 {
@@ -66,12 +72,12 @@
 		transition-delay: 0.1s;
 	}
 
-	.project_title h1:hover::before {
+	.project_card:hover .project_title h1::before {
 		width: 0%; /* Shrinks away */
 		left: 100%; /* Moves to the right, effectively disappearing */
 	}
 
-	.project_title h1:hover::after {
+	.project_card:hover .project_title h1::after {
 		width: 100%; /* Grows to full width */
 		right: 0; /* Starts growing from the left */
 	}

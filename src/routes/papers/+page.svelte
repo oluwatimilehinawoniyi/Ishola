@@ -44,6 +44,7 @@
 <style lang="postcss">
 	main {
 		width: 100%;
+		min-height: 100vh;
 		background: var(--bg-colour);
 		position: relative;
 		align-items: flex-start;

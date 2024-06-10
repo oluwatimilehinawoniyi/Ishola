@@ -14,5 +14,9 @@
 		background-color: var(--bg-colour);
 	}
 
-	/* @media (min-width: ){} */
+	@media (min-width: 1024px) {
+		main {
+			padding-inline: 0;
+		}
+	}
 </style>

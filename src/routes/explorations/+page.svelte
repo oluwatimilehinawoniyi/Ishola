@@ -36,6 +36,7 @@
 
 <style>
 	main {
+		min-height: 100vh;
 		width: 100%;
 		background: var(--bg-colour);
 		position: relative;

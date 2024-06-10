@@ -18,8 +18,8 @@
 			<Now />
 			<Connect />
 		</div>
-		<Footer />
 	</section>
+	<Footer />
 </main>
 
 <style>

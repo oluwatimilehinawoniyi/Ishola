@@ -3,13 +3,13 @@
 </script>
 
 <div>
-	<h2>oluwatimilehin j. awoniyi <span>frontend engineer</span></h2>
+	<h2>oluwatimilehin j. awoniyi <span>fullstack engineer</span></h2>
 	<i>
 		Intensely in
 		<LoveSVG />
-		with web interfaces!
+		with web interfaces and fullstack solutions!
 	</i>
-	<p>Dedicated to weaving the thread of web interfaces with cool user experience in mind.</p>
+	<p>Dedicated to weaving seamless and engaging web experiences from front to back.</p>
 
 	<p>
 		I put pen to paper sometimes.
