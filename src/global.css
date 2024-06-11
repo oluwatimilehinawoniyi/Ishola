@@ -12,6 +12,11 @@ html {
 	font-family: var(--font-inter);
 }
 
+*::selection {
+	background-color: #fff;
+	color: var(--bg-colour);
+}
+
 :root {
 	--font-sacramento: 'Sacramento', cursive;
 	--font-inter: 'Inter', sans-serif;
