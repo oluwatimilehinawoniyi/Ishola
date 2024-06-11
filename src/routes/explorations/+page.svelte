@@ -30,6 +30,7 @@
 			sometimes, they are the figment of my imagination; other times, they are things I have seen
 			and tried implementing on my own...
 		</p>
+		<p>Currently a WIP (work in progress)... stay tuned 🛠️🚧</p>
 		<div class="container"></div>
 	</section>
 </main>
