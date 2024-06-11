@@ -16,6 +16,7 @@ html {
 	--font-sacramento: 'Sacramento', cursive;
 	--font-inter: 'Inter', sans-serif;
 	--bg-colour: rgb(255, 255, 255);
+	--bg-col: 255, 255, 255;
 	--heading-colour: rgb(82, 81, 81);
 	--paragraph-colour: rgb(116, 116, 116);
 	--line-colour: rgb(233, 233, 233);
@@ -37,6 +38,7 @@ html {
 @media (prefers-color-scheme: dark) {
 	:root {
 		--bg-colour: rgb(26, 26, 26);
+		--bg-col: 26, 26, 26;
 		--heading-colour: rgb(255, 255, 255);
 		--paragraph-colour: rgb(207, 207, 207);
 		--paragraph-col: 207, 207, 207;

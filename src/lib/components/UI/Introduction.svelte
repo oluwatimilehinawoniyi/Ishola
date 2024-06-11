@@ -13,7 +13,7 @@
 
 	<p>
 		I put pen to paper sometimes.
-		<a href="/papers" class="blog">
+		<a href="#" class="blog">
 			Blog <svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="16"
