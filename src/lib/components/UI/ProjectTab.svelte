@@ -1,10 +1,9 @@
 <script lang="ts">
 	export let title: string;
-	export let link: string;
 	export let description: string;
 </script>
 
-<a href={link} target="_blank" class="project_card">
+<a  href={title.replace(/ /g, '-')} class="project_card">
 	<div class="project_title">
 		<h1>{title}</h1>
 		<svg
@@ -17,13 +16,13 @@
 			stroke-width="2"
 			stroke-linecap="round"
 			stroke-linejoin="round"
-			class="heading"
+			class="headingIcon"
 			><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path
 				d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
 			/></svg
 		>
 	</div>
-	<p class="project_description">{description}</p>
+	<p class="project_description">{description.split('.')[0]}</p>
 </a>
 
 <style>
@@ -89,5 +88,14 @@
 	.project_description {
 		/* font-size: 0.9rem; */
 		line-height: 1.65;
+	}
+
+	.headingIcon {
+		display: none;
+	}
+	@media screen and (min-width: 768px) {
+		.headingIcon {
+			display: unset;
+		}
 	}
 </style>
