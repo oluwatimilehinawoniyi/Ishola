@@ -9,12 +9,9 @@
 		"stackReason": "",
 		"links": ["url", "github"],
 		"purpose": "",
+		"problems": "",
 		"lessons": "",
-		"screenshots": [
-			"/paladin-hero.png",
-			"/paladin-pricing.png",
-			"/paladin-full.png"
-		]
+		"screenshots": ["/paladin-hero.png", "/paladin-pricing.png", "/paladin-full.png"]
 	},
 	{
 		"id": 2,
@@ -26,12 +23,9 @@
 		"stackReason": "",
 		"links": ["url", "github"],
 		"purpose": "",
+		"problems": "",
 		"lessons": "",
-		"screenshots": [
-			"/audiophile-hero.png",
-			"/audiophile-full.png",
-			"/audiophile-checkout.png"
-		]
+		"screenshots": ["/audiophile-hero.png", "/audiophile-full.png", "/audiophile-checkout.png"]
 	},
 	{
 		"id": 3,
@@ -43,12 +37,9 @@
 		"stackReason": "",
 		"links": ["url", "github"],
 		"purpose": "",
+		"problems": "",
 		"lessons": "",
-		"screenshots": [
-			"/countries-light.png",
-			"/countries-dark.png",
-			"/country-dark.png"
-		]
+		"screenshots": ["/countries-light.png", "/countries-dark.png", "/country-dark.png"]
 	},
 	{
 		"id": 4,
@@ -60,6 +51,7 @@
 		"stackReason": "",
 		"links": ["url", "github"],
 		"purpose": "",
+		"problems": "",
 		"lessons": "",
 		"screenshots": ["/hermes-hero.png", "/hermes-full.png", "/hermes-hero.png"]
 	}

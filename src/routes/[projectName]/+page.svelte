@@ -16,6 +16,7 @@
 		role: string,
 		stackReason: string,
 		webStack: string,
+		problems: string,
 		screenShots: string[];
 
 	$: {
@@ -24,6 +25,7 @@
 			description = project.description;
 			projectId = project.id;
 			lessons = project.lessons;
+			problems = project.problems;
 			links = project.links;
 			purpose = project.purpose;
 			role = project.role;
@@ -90,6 +92,10 @@
 			<p>{stackReason}</p>
 		</div>
 		<div class="image_sample"><img src={screenShots[1]} alt="" /></div>
+		<div class="problems">
+			<h3>problems and thought process</h3>
+			<p>{problems}</p>
+		</div>
 		<div class="lessons">
 			<h3>lessons learnt</h3>
 			<p>{lessons}</p>
@@ -138,7 +144,7 @@
 		text-transform: capitalize;
 		margin-bottom: 0.85rem;
 	}
-	
+
 	h3 {
 		text-transform: capitalize;
 		margin-bottom: 0.5rem;
@@ -160,8 +166,6 @@
 	.others {
 		padding-block: 1rem;
 	}
-
-	
 
 	.others a {
 		display: inline;
