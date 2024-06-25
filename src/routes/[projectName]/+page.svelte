@@ -3,8 +3,6 @@
 	import Footer from '$lib/components/UI/Footer.svelte';
 	import ProjectTab from '$lib/components/UI/ProjectTab.svelte';
 	import { myProjects } from '$lib/data';
-	import type { ProjectType } from '$lib/types/types';
-	import { onMount } from 'svelte';
 
 	export let data;
 	$: project = data?.data;
