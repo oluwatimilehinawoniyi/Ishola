@@ -3,7 +3,7 @@
 </script>
 
 <div>
-	<h2>oluwatimilehin j. awoniyi <span>fullstack engineer</span></h2>
+	<h2>oluwatimilehin j. awoniyi <span>frontend and UX engineer</span></h2>
 	<i>
 		Intensely in
 		<LoveSVG />
