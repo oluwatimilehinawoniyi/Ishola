@@ -9,6 +9,11 @@
 	$: tags = [...data.props?.categories];
 </script>
 
+<svelte:head>
+	<title>Papers</title>
+	<meta name="description" content="Blog posts" />
+</svelte:head>
+
 <main>
 	<div class="control">
 		<a href="/">
@@ -76,6 +81,7 @@
 		width: max-content;
 		gap: 0.3rem;
 	}
+
 	i {
 		font-weight: 500;
 	}
@@ -94,10 +100,6 @@
 	}
 
 	@media screen and (min-width: 1240px) {
-		main {
-			display: grid;
-			grid-template-columns: 1fr 700px 1fr;
-		}
 
 		.control {
 			width: 280px;

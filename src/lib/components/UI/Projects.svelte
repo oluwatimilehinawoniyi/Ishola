@@ -27,8 +27,8 @@
 	<div class="tab_content">
 		{#if activeTab === 'projects'}
 			<div class="grid_tab">
-				{#each myProjects as { id, link, title, description } (id)}
-					<ProjectTab {link} {title} {description} />
+				{#each myProjects as { id, title, description } (id)}
+					<ProjectTab {title} {description} />
 				{/each}
 			</div>
 		{:else if activeTab === 'explorations'}
@@ -65,14 +65,14 @@
 
 	.grid_tab {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 1fr;
 		grid-auto-rows: max-content;
 		gap: 1.5rem 1rem;
 	}
 
-	/* @media screen and (min-width: 768px) {
+	@media screen and (min-width: 420px) {
 		.grid_tab {
 			grid-template-columns: repeat(2, 1fr);
 		}
-	} */
+	}
 </style>

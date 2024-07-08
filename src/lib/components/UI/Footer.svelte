@@ -23,7 +23,7 @@
 	}
 
 	footer div {
-		grid-column: 2/3;
+		/* grid-column: 2/3; */
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -38,6 +38,12 @@
 	@media (prefers-color-scheme: light) {
 		p {
 			font-weight: 400;
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		footer div {
+			grid-column: 2/3;
 		}
 	}
 </style>

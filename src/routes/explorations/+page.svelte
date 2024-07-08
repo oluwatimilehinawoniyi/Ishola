@@ -1,6 +1,10 @@
 <script>
 </script>
 
+<svelte:head>
+	<title>Explorations</title>
+	<meta name="description" content="Explorations of user interface" />
+</svelte:head>
 <main>
 	<div class="control">
 		<a href="/">
