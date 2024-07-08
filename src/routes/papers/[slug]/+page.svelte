@@ -1,33 +1,15 @@
 <script lang="ts">
-	import CustomHeading from '$lib/components/CustomSanities/CustomHeading.svelte';
-	import CustomLink from '$lib/components/CustomSanities/CustomLink.svelte';
-	import CustomParagraph from '$lib/components/CustomSanities/CustomParagraph.svelte';
-	import CustomQuote from '$lib/components/CustomSanities/CustomQuote.svelte';
-	import { formatDate } from '$lib/utils/utils.js';
-	import { PortableText } from '@portabletext/svelte';
+	import { formatDate } from '$lib/utils/formatDate';
 	export let data;
 
-	const { title, subtitle, _createdAt, _updatedAt, image, body } = data.props?.post[0];
-
-	const components = {
-		types: {
-			link: CustomLink
-		},
-		marks: {
-			link: CustomLink
-		},
-		block: {
-			normal: CustomParagraph,
-			blockquote: CustomQuote,
-			h1: CustomHeading,
-			h2: CustomHeading,
-			h3: CustomHeading,
-			h4: CustomHeading,
-			h5: CustomHeading,
-			h6: CustomHeading
-		}
-	};
+	const { title, date, subtitle } = data.metadata;
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content={title} />
+</svelte:head>
 
 <main>
 	<div class="control">
@@ -51,74 +33,40 @@
 		</a>
 	</div>
 
-	<section>
-		<h3>{title}</h3>
+	<artivle>
+		<hgroup>
+			<h3>{title}</h3>
+			<h5>{subtitle}</h5>
+			<p>{`published at: ${formatDate(date)}`}</p>
+		</hgroup>
 
-		<h5>{subtitle}</h5>
-		<div class="date">
-			<p>{`created: ${formatDate(_createdAt)}`}</p>
-			<p>{`updated: ${formatDate(_updatedAt)}`}</p>
-		</div>
+		<section class="prose">
+			<svelte:component this={data.content} />
+		</section>
 
+		<!-- 
 		<div class="image_holder">
 			<img src={image} alt="" />
 		</div>
-
-		<div class="post_content">
-			<PortableText
-				value={body}
-				components={{
-					...components
-				}}
-			/>
-		</div>
-	</section>
+		-->
+	</artivle>
 </main>
 
 <style>
 	main {
 		width: 100%;
+		min-height: 100%;
 		background: var(--bg-colour);
 		position: relative;
 		align-items: flex-start;
 		padding-bottom: 2rem;
 	}
 
-	.date {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	.date p {
-		font-size: 0.8rem;
-	}
-
-	.image_holder {
-		margin-block: 2rem;
-	}
-	.image_holder img {
-		width: 100%;
-	}
-
-	section {
-		width: 100%;
-		grid-column: 2/3;
-	}
-	section h3 {
-		font-size: 1.35rem;
-		text-transform: capitalize;
-		margin-bottom: 0.85rem;
-	}
-
-	section h5 {
-		font-size: 1rem;
-		margin-bottom: 1.6rem;
-	}
-
 	.control {
 		margin-bottom: 1.5rem;
 		grid-column: 1/2;
 	}
+
 	.control a {
 		display: flex;
 		align-items: center;
@@ -128,6 +76,14 @@
 	}
 	.control a i {
 		font-weight: 500;
+	}
+
+	.prose :is(h1, h2, h3, h4, h5, h6) {
+	}
+
+	.prose pre {
+		tab-size: 2;
+		color: white;
 	}
 
 	/* @media screen and (min-width: 768px) {
@@ -145,16 +101,6 @@
 		.control {
 			position: sticky;
 			top: var(--top-padding);
-		}
-
-		.image_holder {
-			height: 300px;
-		}
-		
-		.image_holder img {
-			height: 100%;
-			width: 100%;
-			object-fit: cover;
 		}
 	}
 

@@ -6,7 +6,7 @@
 
 	export let data;
 
-	$: tags = [...data.props?.categories];
+	// $: tags = [...data.props?.categories];
 </script>
 
 <svelte:head>
@@ -34,14 +34,14 @@
 				/>
 			</svg>
 		</a>
-		<Filter {tags} />
+		<!-- <Filter {tags} /> -->
 	</div>
 
 	<section>
 		<h3>pen on papers</h3>
 		<p>I use this medium to write about various topics including tech, agriculture, IoT etc.</p>
 		<div class="container">
-			<Writing posts={$filteredPosts} />
+			<Writing papers={data.papers} />
 		</div>
 	</section>
 </main>
@@ -100,7 +100,6 @@
 	}
 
 	@media screen and (min-width: 1240px) {
-
 		.control {
 			width: 280px;
 			position: fixed;

@@ -1,7 +1,7 @@
-export function formatDate(dateString: string) {
-	const date = new Date(dateString);
-	const day = date.getDate().toString().padStart(2, '0');
-	const month = (date.getMonth() + 1).toString().padStart(2, '0');
-	const year = date.getFullYear();
-	return `${day}/${month}/${year}`;
+type DateStyle = Intl.DateTimeFormatOptions['dateStyle'];
+
+export function formatDate(date: string, dateStyle: DateStyle = 'medium', locales = 'en') {
+	const formater = new Intl.DateTimeFormat(locales, { dateStyle });
+
+	return formater.format(new Date(date));
 }
