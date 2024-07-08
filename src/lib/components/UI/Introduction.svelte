@@ -3,7 +3,7 @@
 </script>
 
 <div>
-	<h2>oluwatimilehin j. awoniyi <span>fullstack engineer</span></h2>
+	<h2>oluwatimilehin j. awoniyi <span>frontend and UX engineer</span></h2>
 	<i>
 		Intensely in
 		<LoveSVG />
@@ -13,7 +13,7 @@
 
 	<p>
 		I put pen to paper sometimes.
-		<a href="#" class="blog">
+		<a href="papers" class="blog">
 			Blog <svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="16"
