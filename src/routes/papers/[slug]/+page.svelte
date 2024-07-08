@@ -33,10 +33,10 @@
 		</a>
 	</div>
 
-	<artivle>
+	<article>
 		<hgroup>
-			<h3>{title}</h3>
-			<h5>{subtitle}</h5>
+			<h1>{title}</h1>
+			<p>{subtitle}</p>
 			<p>{`published at: ${formatDate(date)}`}</p>
 		</hgroup>
 
@@ -49,10 +49,10 @@
 			<img src={image} alt="" />
 		</div>
 		-->
-	</artivle>
+	</article>
 </main>
 
-<style>
+<style lang="postcss">
 	main {
 		width: 100%;
 		min-height: 100%;
@@ -60,6 +60,14 @@
 		position: relative;
 		align-items: flex-start;
 		padding-bottom: 2rem;
+	}
+
+	article h1 {
+		font-size: 1.5rem;
+	}
+
+	article p {
+		font-size: 1.15rem;
 	}
 
 	.control {
@@ -78,14 +86,6 @@
 		font-weight: 500;
 	}
 
-	.prose :is(h1, h2, h3, h4, h5, h6) {
-	}
-
-	.prose pre {
-		tab-size: 2;
-		color: white;
-	}
-
 	/* @media screen and (min-width: 768px) {
 		main {
 		}
@@ -101,6 +101,10 @@
 		.control {
 			position: sticky;
 			top: var(--top-padding);
+		}
+
+		article {
+			grid-column: 2/3;
 		}
 	}
 

@@ -67,7 +67,8 @@
 
 	.container {
 		width: 100%;
-		margin-block: 3rem;
+		margin-block: 3rem 0;
+		padding-bottom: 1rem;
 	}
 
 	.control {

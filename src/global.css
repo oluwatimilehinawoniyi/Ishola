@@ -70,6 +70,7 @@ blockquote {
 	color: var(--heading-colour);
 	font-weight: 600;
 }
+
 p,
 i {
 	color: var(--paragraph-colour);
@@ -85,8 +86,41 @@ a {
 svg {
 	stroke: var(--paragraph-colour);
 }
+
 svg.heading {
 	opacity: 0.85;
+}
+
+.prose {
+	:is(h1, h2, h3, h4, h5, h6) {
+		margin-block: 2rem 0.5rem;
+	}
+
+	ul,
+	ol {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+
+		li {
+			color: var(--paragraph-colour);
+			list-style-position: inside;
+
+			&:first-of-type {
+				margin-top: 0.5rem;
+			}
+		}
+	}
+}
+
+.prose pre {
+	margin-block: 2rem;
+	max-inline-size: 100%;
+	tab-size: 2;
+	padding: 1rem;
+	border-radius: 1rem;
+	background-color: var(--line-colour);
+	color: var(--paragraph-colour);
 }
 
 /* @media (prefers-color-scheme: dark) {
