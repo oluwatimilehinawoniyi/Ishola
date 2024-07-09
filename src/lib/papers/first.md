@@ -1,10 +1,12 @@
 ---
 title: My First Post
-subtitle: how I wrote my first post
 description: first post description
 date: '2023-06-25'
 tags: ['Svelte', 'Mdsvex', 'Markdown']
 published: true
+url: 'https://www.oluwatimilehinawoniyi.com/first'
+keywords: ''
+image: ''
 ---
 
 # Introduction to Markdown

@@ -1,10 +1,12 @@
 ---
 title: The Benefits of a Plant-Based Diet
-subtitle: how I wrote my first post
 description: first post description
 date: '2025-06-25'
 tags: ['Svelte', 'Mdsvex', 'Markdown']
 published: true
+url: 'https://www.oluwatimilehinawoniyi.com/plant-based-diet'
+keywords: ''
+image: ''
 ---
 
 # The Benefits of a Plant-Based Diet

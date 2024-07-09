@@ -1,14 +1,30 @@
 <script lang="ts">
+	import Connect from '$lib/components/UI/Connect.svelte';
 	import { formatDate } from '$lib/utils/formatDate';
 	export let data;
 
-	const { title, date, subtitle } = data.metadata;
+	const { title, date, description, url, image, keywords } = data.metadata;
 </script>
 
 <svelte:head>
 	<title>{title}</title>
+
+	<!-- General Meta Tags -->
+	<meta name="description" content={description} />
+	<meta name="keywords" content={keywords} />
+
+	<!-- Open Graph Meta Tags -->
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:url" content={url} />
+	<meta property="og:image" content={image} />
+
+	<!-- Twitter Card Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={image} />
 </svelte:head>
 
 <main>
@@ -36,26 +52,21 @@
 	<article>
 		<hgroup>
 			<h1>{title}</h1>
-			<p>{subtitle}</p>
-			<p>{`published at: ${formatDate(date)}`}</p>
+			<p class="">{`published: ${formatDate(date)}`}</p>
 		</hgroup>
 
 		<section class="prose">
 			<svelte:component this={data.content} />
 		</section>
 
-		<!-- 
-		<div class="image_holder">
-			<img src={image} alt="" />
-		</div>
-		-->
+		<Connect />
 	</article>
 </main>
 
 <style lang="postcss">
 	main {
 		width: 100%;
-		min-height: 100%;
+		min-height: calc(100vh - var(--top-padding));
 		background: var(--bg-colour);
 		position: relative;
 		align-items: flex-start;
@@ -63,15 +74,19 @@
 	}
 
 	article h1 {
-		font-size: 1.5rem;
+		font-size: 1.35rem;
+		text-transform: capitalize;
+		margin-bottom: 0.85rem;
 	}
 
 	article p {
-		font-size: 1.15rem;
+		text-transform: capitalize;
+		font-size: 0.85rem;
+		opacity: 0.5;
 	}
 
 	.control {
-		margin-bottom: 1.5rem;
+		margin-bottom: 2.5rem;
 		grid-column: 1/2;
 	}
 

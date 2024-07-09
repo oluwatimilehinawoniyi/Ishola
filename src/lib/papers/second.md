@@ -1,10 +1,12 @@
 ---
 title: My Second Post
-subtitle: how I wrote my second post
 description: second post description
 date: '2023-07-25'
 tags: ['Svelte', 'Mdsvex', 'Markdown']
 published: true
+url: 'https://www.oluwatimilehinawoniyi.com/second'
+keywords: ''
+image: ''
 ---
 
 ## Second post

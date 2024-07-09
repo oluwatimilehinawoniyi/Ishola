@@ -94,10 +94,12 @@ svg.heading {
 .prose {
 	:is(h1, h2, h3, h4, h5, h6) {
 		margin-block: 2rem 0.5rem;
+		font-weight: 600;
 	}
 
 	ul,
 	ol {
+		margin-top: 0.5rem;
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
@@ -105,12 +107,17 @@ svg.heading {
 		li {
 			color: var(--paragraph-colour);
 			list-style-position: inside;
+			line-height: 1.5;
 
 			&:first-of-type {
 				margin-top: 0.5rem;
 			}
 		}
 	}
+}
+
+.prose strong {
+	font-weight: 500;
 }
 
 .prose pre {
@@ -121,6 +128,10 @@ svg.heading {
 	border-radius: 1rem;
 	background-color: var(--line-colour);
 	color: var(--paragraph-colour);
+
+	code span {
+		font-size: 0.9rem;
+	}
 }
 
 /* @media (prefers-color-scheme: dark) {

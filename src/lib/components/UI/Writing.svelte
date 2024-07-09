@@ -10,11 +10,10 @@
 </svelte:head>
 
 <section>
-	{#each papers as { title, subtitle, date, slug } (title)}
+	{#each papers as { title, date, slug } (title)}
 		<a href={`papers/${slug}`} class="container">
 			<div class="heading">
-				<h3>{title}</h3>
-				<p>{subtitle}</p>
+				<h3 class="">{title}</h3>
 			</div>
 			<p class="date">{formatDate(date)}</p>
 		</a>
@@ -27,6 +26,7 @@
 	}
 
 	.container {
+		width: 100%;
 		cursor: pointer;
 		padding: 1rem 0rem;
 		display: flex;
@@ -35,17 +35,23 @@
 		border-top: 1px solid var(--paragraph-colour);
 	}
 
+	.heading {
+		max-width: 70%;
+	}
+	
 	h3 {
 		text-transform: capitalize;
 		margin-bottom: 0.5rem;
-	}
-	.container:hover {
-		background: #ebebeb9a;
+		font-weight: 500;
 	}
 
-	@media (prefers-color-scheme: dark) {
-		.container:hover {
-			background: #4d4c4c9a;
-		}
+	h3,
+	p {
+		transition: opacity 0.2s linear;
+	}
+
+	section:hover a.container:not(:hover) h3,
+	section:hover a.container:not(:hover) p {
+		opacity: 0.5;
 	}
 </style>

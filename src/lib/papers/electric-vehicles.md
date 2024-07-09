@@ -1,10 +1,12 @@
 ---
 title: the rise of electric vehicles
-subtitle: how I wrote my first post
 description: first post description
 date: '2024-06-25'
 tags: ['Svelte', 'Mdsvex', 'Markdown']
 published: true
+url: 'https://www.oluwatimilehinawoniyi.com/electric-vehicles'
+keywords: ''
+image: ''
 ---
 
 # The Rise of Electric Vehicles

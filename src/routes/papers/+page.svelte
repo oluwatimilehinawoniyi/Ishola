@@ -49,7 +49,7 @@
 <style lang="postcss">
 	main {
 		width: 100%;
-		min-height: 100vh;
+		min-height: calc(100vh - var(--top-padding));
 		background: var(--bg-colour);
 		position: relative;
 		align-items: flex-start;
@@ -59,6 +59,7 @@
 		width: 100%;
 		grid-column: 2/3;
 	}
+
 	h3 {
 		font-size: 1.35rem;
 		text-transform: capitalize;

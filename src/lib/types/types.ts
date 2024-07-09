@@ -4,7 +4,6 @@ export interface PaperType {
 	title: string;
 	slug: string;
 	categories: CategoryType[];
-	subtitle: string;
 	date: string;
 	published: boolean;
 	// image: string;
