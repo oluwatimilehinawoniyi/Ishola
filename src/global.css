@@ -4,12 +4,13 @@
 	box-sizing: border-box;
 	font-size: 15px;
 	scrollbar-width: thin;
-	scrollbar-color: rgb(61, 61, 61);
+	scrollbar-color: var(--card-bg) var(--bg-colour);
 	scroll-behavior: smooth;
 }
 
 html {
 	font-family: var(--font-inter);
+	background-color: var(--bg-colour);
 }
 
 *::selection {
