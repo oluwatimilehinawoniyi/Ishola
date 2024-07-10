@@ -135,6 +135,16 @@ svg.heading {
 	}
 }
 
+.prose a {
+	text-decoration: underline;
+	text-underline-offset: 2.5px;
+}
+
+.prose p img {
+	width: 100%;
+	margin-block: 2rem;
+}
+
 /* @media (prefers-color-scheme: dark) {
 	:root {
 		--bg-colour: rgb(255, 255, 255);

@@ -43,7 +43,7 @@ Switching to a plant-based diet can significantly reduce your environmental foot
 
 Adopting a plant-based diet can improve your health and help protect the environment. It's easier than ever to find delicious and nutritious plant-based options.
 
-![Plant-Based Foods](https://upload.wikimedia.org/wikipedia/commons/4/49/Various_veggies.jpg)
+![Plant-Based Foods](/country-dark.png)
 
 For more information, visit these resources:
 
