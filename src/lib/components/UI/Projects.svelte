@@ -11,13 +11,13 @@
 		activeTab = tab;
 	}
 
-	const data = ['projects', 'explorations'];
+	const data = ['projects', 'UI explorations'];
 </script>
 
 <section>
 	<div class="tab_header">
 		{#each data as item (item)}
-			{#if item !== 'explorations'}
+			{#if item !== 'UI explorations'}
 				<Button btn={item} {changeTab} {activeTab} />
 			{:else}
 				<a href="/explorations" class="explore">{item}</a>

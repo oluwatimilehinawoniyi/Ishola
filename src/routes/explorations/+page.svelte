@@ -1,4 +1,6 @@
 <script>
+	import Connect from '$lib/components/UI/Connect.svelte';
+
 	let title = 'UI Explorations';
 	let description = 'Explorations of user interface';
 	let url = 'https://www.oluwatimilehinawoniyi.com/explorations';
@@ -55,16 +57,18 @@
 		</p>
 		<p>Currently a WIP (work in progress)... stay tuned 🛠️🚧</p>
 		<div class="container"></div>
+		<Connect />
 	</section>
 </main>
 
 <style>
 	main {
-		min-height: 100vh;
+		min-height: calc(100vh - var(--top-padding));
 		width: 100%;
 		background: var(--bg-colour);
 		position: relative;
 		align-items: flex-start;
+		padding-bottom: 1rem;
 	}
 
 	section {
