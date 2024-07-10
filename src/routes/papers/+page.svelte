@@ -3,8 +3,11 @@
 	import Filter from '$lib/components/UI/Filter.svelte';
 	import Writing from '$lib/components/UI/Writing.svelte';
 	import { filteredPosts } from '$lib/store/FilterPaperStore';
+	import Connect from '$lib/components/UI/Connect.svelte';
 
 	export let data;
+
+	data.papers = [];
 
 	// $: tags = [...data.props?.categories];
 </script>
@@ -39,10 +42,18 @@
 
 	<section>
 		<h3>pen on papers</h3>
-		<p>I use this medium to write about various topics including tech, agriculture, IoT etc.</p>
+		<p>
+			I use this medium to write about various topics including tech, agriculture, life, IoT etc. If
+			you have a comment or enquiry, please reach out via the links below
+		</p>
 		<div class="container">
-			<Writing papers={data.papers} />
+			{#if data.papers.length > 0}
+				<Writing papers={data.papers} />
+			{:else}
+				<p>Currently a WIP (work in progress)... stay tuned 🛠️🚧</p>
+			{/if}
 		</div>
+		<Connect />
 	</section>
 </main>
 
