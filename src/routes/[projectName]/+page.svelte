@@ -3,6 +3,7 @@
 	import Footer from '$lib/components/UI/Footer.svelte';
 	import ProjectTab from '$lib/components/UI/ProjectTab.svelte';
 	import { myProjects } from '$lib/data';
+	import GoBack from '$lib/components/common/GoBack.svelte';
 
 	export let data;
 	$: project = data?.data;
@@ -11,7 +12,7 @@
 		description: string,
 		projectId: number,
 		lessons: string,
-		links: string[],
+		links: { title: string | null; link: string }[],
 		purpose: string,
 		role: string,
 		stackReason: string,
@@ -42,26 +43,7 @@
 </svelte:head>
 
 <main>
-	<div class="control">
-		<a href="/">
-			<i>go back</i>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="16"
-				height="16"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				class="lucide lucide-undo-2"
-				><path d="M9 14 4 9l5-5" /><path
-					d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11"
-				/>
-			</svg>
-		</a>
-	</div>
+	<GoBack />
 	<section class="project_details">
 		<div class="introduction">
 			<h1 class="title">{title}</h1>
@@ -80,13 +62,39 @@
 					<li>-> {stack}</li>
 				{/each}
 			</ul>
+			<ul class="links">
+				<h3>links</h3>
+				{#each links as { title, link }, index (index)}
+					{#if title}
+						<li>
+							<a href={link} target="_blank"
+								>-> {title}
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="headingIcon"
+									><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path
+										d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+									/></svg
+								></a
+							>
+						</li>
+					{/if}
+				{/each}
+			</ul>
 		</div>
-		<div class="image_sample"><img src="" alt="" /></div>
+		<div class="image_sample"><img src={screenShots[0]} alt="" /></div>
 		<div class="purpose">
 			<h3>project purpose</h3>
 			<p>{purpose}</p>
 		</div>
-		<div class="image_sample"><img src={screenShots[0]} alt="" /></div>
 		<div class="web_stack">
 			<h3>web stack usage</h3>
 			<p>{stackReason}</p>
@@ -96,11 +104,12 @@
 			<h3>problems and thought process</h3>
 			<p>{problems}</p>
 		</div>
+		<div class="image_sample"><img src={screenShots[2]} alt="" /></div>
+
 		<div class="lessons">
 			<h3>lessons learnt</h3>
 			<p>{lessons}</p>
 		</div>
-		<div class="image_sample"><img src={screenShots[2]} alt="" /></div>
 		<div class="other_projects_section">
 			<div class="others">
 				<h3 class="">Other projects:</h3>
@@ -150,15 +159,9 @@
 		margin-bottom: 0.5rem;
 	}
 
-	.control {
-		margin-bottom: 1.5rem;
-		grid-column: 1/2;
-	}
-
 	a {
 		display: flex;
 		align-items: center;
-		flex-direction: row-reverse;
 		width: max-content;
 		gap: 0.3rem;
 	}
@@ -169,10 +172,6 @@
 
 	.others a {
 		display: inline;
-	}
-
-	i {
-		font-weight: 500;
 	}
 
 	.role_and_stack {
@@ -186,16 +185,23 @@
 	}
 
 	.role,
-	.stack {
+	.stack,
+	.links {
 		text-transform: capitalize;
 	}
 
-	.role_and_stack ul li {
+	.role_and_stack ul li,
+	.role_and_stack ul li a {
 		font-size: 0.9rem;
 	}
 
-	.role_and_stack ul li:not(:last-of-type) {
-		padding-block: 0.5rem;
+	.role_and_stack ul h3 {
+		margin-bottom: 0.7rem;
+	}
+
+	.role_and_stack ul li:not(:first-of-type),
+	.role_and_stack ul li a:not(:first-of-type) {
+		margin-top: 0.7rem;
 	}
 
 	.image_sample {
@@ -225,29 +231,12 @@
 			grid-template-columns: 1fr 700px 1fr;
 			gap: 1rem;
 		}
-
-		.control {
-			position: sticky;
-			top: var(--top-padding);
-		}
 	}
 
 	@media screen and (min-width: 768px) {
 		main {
 			display: grid;
 			grid-template-columns: 1fr 700px 1fr;
-		}
-
-		.control {
-			width: 280px;
-			position: fixed;
-			left: 0;
-			padding-left: 1rem;
-		}
-	}
-	@media screen and (min-width: 1024px) {
-		.control {
-			padding-left: 4rem;
 		}
 	}
 </style>
