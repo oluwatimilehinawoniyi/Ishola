@@ -193,6 +193,7 @@
 	.role_and_stack ul li,
 	.role_and_stack ul li a {
 		font-size: 0.9rem;
+		color: var(--paragraph-colour);
 	}
 
 	.role_and_stack ul h3 {

@@ -50,9 +50,9 @@
 	{
 		"id": 4,
 		"title": "hermes logistics",
-		"description": "An efficient platform developed to streamline logistics management.",
+		"description": "An efficient platform developed to streamline logistics management. Hermes Logistics provides an efficient platform for managing logistics operations. The application covers a wide range of services such as storage, handling, transportation, and expedited deliveries. Designed to streamline logistics management, it ensures timely deliveries and effective tracking of parcels and shipments.",
 		"role": "fullstack engineer, UI/UX Designer",
-		"webStack": "Sveltekit, TailwindCSS, ExpressJS, Lucia, MongoDB",
+		"webStack": "react, nextJS, CSS Modules, supaBase",
 		"stackReason": "",
 		"links": [
 			{ "title": "live site", "link": "https://hermeslogistics.vercel.app/" },
@@ -61,7 +61,7 @@
 		"purpose": "",
 		"problems": "",
 		"lessons": "",
-		"screenshots": ["/hermes-hero.png", "/hermes-full.png", "/hermes-hero.png"]
+		"screenshots": ["/hermes-hero.png", "/hermes-full.png", "/Hermes.png"]
 	},
 	{
 		"id": 5,
