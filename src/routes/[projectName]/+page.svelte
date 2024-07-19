@@ -145,7 +145,7 @@
 		grid-column: 2/3;
 		display: flex;
 		flex-direction: column;
-		gap: 1.5rem;
+		gap: 4rem;
 	}
 
 	h1 {
@@ -207,6 +207,7 @@
 
 	.image_sample {
 		width: 100%;
+		box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
 	}
 
 	.image_sample img {
