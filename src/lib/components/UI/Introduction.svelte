@@ -3,7 +3,12 @@
 </script>
 
 <div>
-	<h2>oluwatimilehin j. awoniyi <span>frontend and UX engineer</span></h2>
+	<div class="profile">
+		<div class="profile_image">
+			<img src="/profile.webp" alt="profile pic of oluwatimilehin awoniyi" />
+		</div>
+		<h2>oluwatimilehin j. awoniyi <span>frontend and UX engineer</span></h2>
+	</div>
 	<i>
 		Intensely in
 		<LoveSVG />
@@ -34,6 +39,26 @@
 </div>
 
 <style>
+	.profile {
+		display: flex;
+		align-items: center;
+		margin-bottom: 2rem;
+		gap: 1rem;
+	}
+
+	img {
+		width: 100%;
+		scale: 1.5;
+		transform-origin: top center;
+	}
+
+	.profile_image {
+		border-radius: 10000px;
+		overflow: hidden;
+		width: 70px;
+		height: 70px;
+	}
+
 	.blog {
 		cursor: pointer;
 		text-transform: capitalize;
@@ -79,11 +104,11 @@
 	span {
 		display: block;
 		margin-top: 0.5rem;
+		font-weight: 400;
 		color: var(--paragraph-colour);
 	}
 	h2 {
 		text-transform: capitalize;
-		margin-bottom: 2rem;
 		font-size: 1.45rem;
 	}
 	i {
